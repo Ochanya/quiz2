@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Quiz Questions</title>
+  </head>
+
+  <body>
+    <h1>Quiz</h1>
+    <section id="quiz"></section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <script id="question" type="text/x-handlebars-template">
+      <article>
+        <h1>Question</h1>
+
+     <fieldset>
+        <legend>{{question}}</legend>
+        <ul>
+          {{#each choices}}
+          <li><input type="radio" name="option" value="a" />{{this}}</li>
+          {{/each}}
+        </ul>
+        <span class="answer"></span>
+      </fieldset>
+      <span class="answer"></span>
+    </article>
+    </script>
+    <script src="./index.js"></script>
+    </body>
+
+    </html>
